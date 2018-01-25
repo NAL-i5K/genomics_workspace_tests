@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170614 16:02:04.250" generator="Robot 3.0 (Python 2.7.13 on linux2)">
+<suite source="/app/local/robotframework/test_case/blast" id="s1" name="Blast">
+<suite source="/app/local/robotframework/test_case/blast/backend.txt" id="s1-s1" name="Backend">
+<test id="s1-s1-t1" name="valid_query">
+<kw type="setup" name="Open and Max Browser" library="resource">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:04.994" level="INFO">Opening browser 'firefox' to base url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:31.013" starttime="20170614 16:02:04.994"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170614 16:02:31.042" starttime="20170614 16:02:31.014"></status>
+</kw>
+<status status="PASS" endtime="20170614 16:02:31.043" starttime="20170614 16:02:04.993"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:31.043" level="INFO">Opening url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:31.124" starttime="20170614 16:02:31.043"></status>
+</kw>
+<kw name="Choose Database">
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]</arg>
+</arguments>
+<msg timestamp="20170614 16:02:31.125" level="INFO">Selecting checkbox 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170614 16:02:31.266" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170614 16:02:31.266" starttime="20170614 16:02:31.147"></status>
+</kw>
+<msg timestamp="20170614 16:02:31.293" level="FAIL">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</msg>
+<status status="FAIL" endtime="20170614 16:02:31.293" starttime="20170614 16:02:31.125"></status>
+</kw>
+<status status="FAIL" endtime="20170614 16:02:31.293" starttime="20170614 16:02:31.124"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170614 16:02:31.349" starttime="20170614 16:02:31.294"></status>
+</kw>
+<doc>Use sample sequence to query 2 databases and confirm the jbrowse link works</doc>
+<status status="FAIL" endtime="20170614 16:02:31.349" critical="yes" starttime="20170614 16:02:04.992">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</status>
+</test>
+<test id="s1-s1-t2" name="no_hits_query">
+<kw type="setup" name="Open and Max Browser" library="resource">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:31.352" level="INFO">Opening browser 'firefox' to base url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:33.959" starttime="20170614 16:02:31.352"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170614 16:02:34.004" starttime="20170614 16:02:33.960"></status>
+</kw>
+<status status="PASS" endtime="20170614 16:02:34.004" starttime="20170614 16:02:31.351"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:34.005" level="INFO">Opening url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:34.068" starttime="20170614 16:02:34.004"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>.1 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20170614 16:02:34.069" starttime="20170614 16:02:34.068"></status>
+</kw>
+<kw name="Choose Database">
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]</arg>
+</arguments>
+<msg timestamp="20170614 16:02:34.070" level="INFO">Selecting checkbox 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170614 16:02:34.352" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170614 16:02:34.352" starttime="20170614 16:02:34.187"></status>
+</kw>
+<msg timestamp="20170614 16:02:34.353" level="FAIL">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</msg>
+<status status="FAIL" endtime="20170614 16:02:34.353" starttime="20170614 16:02:34.070"></status>
+</kw>
+<status status="FAIL" endtime="20170614 16:02:34.354" starttime="20170614 16:02:34.069"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170614 16:02:34.490" starttime="20170614 16:02:34.355"></status>
+</kw>
+<doc>Use 'abc123' to query 2 databases and confirm no hits</doc>
+<status status="FAIL" endtime="20170614 16:02:34.491" critical="yes" starttime="20170614 16:02:31.350">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</status>
+</test>
+<test id="s1-s1-t3" name="upload_file">
+<kw type="setup" name="Open and Max Browser" library="resource">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:34.494" level="INFO">Opening browser 'firefox' to base url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:37.208" starttime="20170614 16:02:34.493"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170614 16:02:37.320" starttime="20170614 16:02:37.209"></status>
+</kw>
+<status status="PASS" endtime="20170614 16:02:37.320" starttime="20170614 16:02:34.492"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:37.321" level="INFO">Opening url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:37.478" starttime="20170614 16:02:37.321"></status>
+</kw>
+<kw name="Choose Database">
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]</arg>
+</arguments>
+<msg timestamp="20170614 16:02:37.480" level="INFO">Selecting checkbox 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170614 16:02:37.752" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170614 16:02:37.752" starttime="20170614 16:02:37.590"></status>
+</kw>
+<msg timestamp="20170614 16:02:37.753" level="FAIL">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</msg>
+<status status="FAIL" endtime="20170614 16:02:37.753" starttime="20170614 16:02:37.479"></status>
+</kw>
+<status status="FAIL" endtime="20170614 16:02:37.753" starttime="20170614 16:02:37.479"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170614 16:02:37.891" starttime="20170614 16:02:37.754"></status>
+</kw>
+<doc>Query by uploading sample file</doc>
+<status status="FAIL" endtime="20170614 16:02:37.891" critical="yes" starttime="20170614 16:02:34.492">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</status>
+</test>
+<test id="s1-s1-t4" name="test_back_button">
+<kw type="setup" name="Open and Max Browser" library="resource">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:37.894" level="INFO">Opening browser 'firefox' to base url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:40.744" starttime="20170614 16:02:37.894"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170614 16:02:40.855" starttime="20170614 16:02:40.745"></status>
+</kw>
+<status status="PASS" endtime="20170614 16:02:40.856" starttime="20170614 16:02:37.893"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:40.856" level="INFO">Opening url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:41.015" starttime="20170614 16:02:40.856"></status>
+</kw>
+<kw name="Get Matching Xpath Count" library="Selenium2Library">
+<doc>Returns number of elements matching `xpath`</doc>
+<arguments>
+<arg>${xpath_num_organism}</arg>
+</arguments>
+<assign>
+<var>${total_organism}</var>
+</assign>
+<msg timestamp="20170614 16:02:41.128" level="INFO">${total_organism} = 0</msg>
+<status status="PASS" endtime="20170614 16:02:41.128" starttime="20170614 16:02:41.015"></status>
+</kw>
+<kw name="Choose Database">
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]</arg>
+</arguments>
+<msg timestamp="20170614 16:02:41.129" level="INFO">Selecting checkbox 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170614 16:02:41.414" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170614 16:02:41.414" starttime="20170614 16:02:41.243"></status>
+</kw>
+<msg timestamp="20170614 16:02:41.415" level="FAIL">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</msg>
+<status status="FAIL" endtime="20170614 16:02:41.415" starttime="20170614 16:02:41.129"></status>
+</kw>
+<status status="FAIL" endtime="20170614 16:02:41.415" starttime="20170614 16:02:41.128"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170614 16:02:41.549" starttime="20170614 16:02:41.416"></status>
+</kw>
+<doc>Click back button of browser after querying, and the organisms should be displayed normally (check the number of organism labels)</doc>
+<status status="FAIL" endtime="20170614 16:02:41.549" critical="yes" starttime="20170614 16:02:37.892">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</status>
+</test>
+<status status="FAIL" endtime="20170614 16:02:41.551" starttime="20170614 16:02:04.340"></status>
+</suite>
+<suite source="/app/local/robotframework/test_case/blast/frontend.txt" id="s1-s2" name="Frontend">
+<kw type="setup" name="Open and Max Browser" library="resource">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:41.559" level="INFO">Opening browser 'firefox' to base url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:45.136" starttime="20170614 16:02:41.559"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170614 16:02:45.246" starttime="20170614 16:02:45.137"></status>
+</kw>
+<status status="PASS" endtime="20170614 16:02:45.247" starttime="20170614 16:02:41.558"></status>
+</kw>
+<test id="s1-s2-t1" name="organism_empty_false_check">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:45.249" level="INFO">Opening url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:45.397" starttime="20170614 16:02:45.248"></status>
+</kw>
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]</arg>
+</arguments>
+<msg timestamp="20170614 16:02:45.397" level="INFO">Selecting checkbox 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170614 16:02:45.681" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170614 16:02:45.681" starttime="20170614 16:02:45.508"></status>
+</kw>
+<msg timestamp="20170614 16:02:45.682" level="FAIL">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</msg>
+<status status="FAIL" endtime="20170614 16:02:45.682" starttime="20170614 16:02:45.397"></status>
+</kw>
+<doc>After choosing organisms, mouse over on 'All organisms', sanity check will be triggered incorrectly</doc>
+<status status="FAIL" endtime="20170614 16:02:45.682" critical="yes" starttime="20170614 16:02:45.247">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "anoplophora-glabripennis")]' did not match any elements.</status>
+</test>
+<test id="s1-s2-t2" name="uncheck_all_organisms">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170614 16:02:45.685" level="INFO">Opening url 'http://gmod-dev.nal.usda.gov/webapp/blast'</msg>
+<status status="PASS" endtime="20170614 16:02:45.849" starttime="20170614 16:02:45.684"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]</arg>
+</arguments>
+<msg timestamp="20170614 16:02:45.850" level="INFO">Clicking element 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170614 16:02:46.135" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170614 16:02:46.135" starttime="20170614 16:02:45.962"></status>
+</kw>
+<msg timestamp="20170614 16:02:46.136" level="FAIL">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]' did not match any elements.</msg>
+<status status="FAIL" endtime="20170614 16:02:46.136" starttime="20170614 16:02:45.850"></status>
+</kw>
+<doc>checking and unchecking "all organisms" should be done in at most 30 seconds in FF, otherwise indicates serious performance javascript issues</doc>
+<status status="FAIL" endtime="20170614 16:02:46.136" critical="yes" starttime="20170614 16:02:45.683">ValueError: Element locator 'xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]' did not match any elements.</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170614 16:02:46.269" starttime="20170614 16:02:46.137"></status>
+</kw>
+<status status="FAIL" endtime="20170614 16:02:46.269" starttime="20170614 16:02:41.554"></status>
+</suite>
+<status status="FAIL" endtime="20170614 16:02:46.272" starttime="20170614 16:02:04.253"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="6" pass="0">Critical Tests</stat>
+<stat fail="6" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="6" id="s1" name="Blast" pass="0">Blast</stat>
+<stat fail="4" id="s1-s1" name="Backend" pass="0">Blast.Backend</stat>
+<stat fail="2" id="s1-s2" name="Frontend" pass="0">Blast.Frontend</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
