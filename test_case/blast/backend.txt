@@ -15,14 +15,14 @@ valid_query
     Click Element    xpath=//*/span[contains(@class, "load-nucleotide")]
     Mouse Over    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "ceratitis-capitata")]
     Search and Confirm
-    Wait Results    46
+    Wait Results
     Click Element    //*[@id="results-table"]/tbody/tr[1]/td[1]/a    # Click JBrowse btn and comfirm
     Sleep    10s
 #    @{win_titles} =    Get Window Titles
 #    Select Window    title=@{win_titles}[1]
 #    Confirm Jbrowse
 #    Select Window    title=@{win_titles}[0]    # Return to result page
-#    Wait Results    10
+#    Wait Results
     [Teardown]    Close All Browsers
 
 no_hits_query
@@ -45,14 +45,14 @@ upload_file
     Choose File    xpath=//input[@name="query-file" and @class="query-file"]    ${CURDIR}${/}sample.txt
     Mouse Over    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "ceratitis-capitata")]
     Search and Confirm
-    Wait Results    104
+    Wait Results
     Click Element    //*[@id="results-table"]/tbody/tr[3]/td[1]/a    # Click JBrowse btn and comfirm
     Sleep    10s
 #    @{win_titles} =    Get Window Titles
 #    Select Window    title=@{win_titles}[1]
 #    Confirm Jbrowse
 #    Select Window    title=@{win_titles}[0]    # Return to result page
-#    Wait Results    104
+#    Wait Results
 #    [Teardown]    Close All Browsers
 
 #special_query1
@@ -71,7 +71,7 @@ test_back_button
     Click Element    xpath=//*/span[contains(@class, "load-nucleotide")]
     Mouse Over    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "ceratitis-capitata")]
     Search and Confirm
-    Wait Results    46
+    Wait Results
     Go Back
     Sleep    2s
     Xpath Should Match X Times    ${xpath_num_organism}    ${total_organism}
@@ -91,9 +91,8 @@ Search and Confirm
     Wait Until Page Contains    Query Submitted
 
 Wait Results
-    [Arguments]    ${results_num}
-    [Documentation]    ${result_num} = Number of \ BLAST Query Results
-    Wait Until Element is Visible    xpath=//*[@id="results-table_info" and contains(., "of ${results_num} entries")]    timeout=90s
+    [Documentation]
+    Wait Until Element is Visible    xpath=//*[@id="results-table_info" and contains(., "entries")]    timeout=90s
     Should Not Have JS Errors
 
 Should Not Have JS Errors
