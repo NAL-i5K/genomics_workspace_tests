@@ -1,1 +1,7 @@
 .DS_Store
+.vscode/
+env/
+geckodriver.log
+log.html
+report.html
+output.xml
