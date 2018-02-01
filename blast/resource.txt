@@ -3,10 +3,10 @@ Library           SeleniumLibrary    10
 
 *** Variables ***
 ${url}
-${browser}        firefox
+${browser}        chrome
 
 *** Keywords ***
 Open and Max Browser
     [Arguments]    ${url}    ${browser}
     Open Browser    ${url}    ${browser}
-    Maximize Browser Window
+    #Maximize Browser Window
