@@ -9,4 +9,4 @@ ${browser}        chrome
 Open and Max Browser
     [Arguments]    ${url}    ${browser}
     Open Browser    ${url}    ${browser}
-    #Maximize Browser Window
+    Set Window Size    1280    1024

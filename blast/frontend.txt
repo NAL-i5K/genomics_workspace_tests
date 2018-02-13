@@ -17,7 +17,8 @@ organism_empty_false_check
 uncheck_all_organisms
     [Documentation]    checking and unchecking "all organisms" should be done in at most 30 seconds in FF, otherwise indicates serious performance javascript issues
     Go To    ${url}
-    Click Element    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]
-    Click Element    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]
-    Click Element    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]
-    Click Element    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "all")]
+    Mouse Over    xpath=//*[@id="box-organism"]/*/div[contains(@organism, "all")]
+    Click Element    class:all-organism-checkbox
+    Click Element    class:all-organism-checkbox
+    Click Element    class:all-organism-checkbox
+    Click Element    class:all-organism-checkbox
