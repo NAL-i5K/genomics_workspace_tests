@@ -18,11 +18,6 @@ valid_query
     Wait Results
     Click Element    //*[@id="results-table"]/tbody/tr[1]/td[1]/a    # Click JBrowse btn and comfirm
     Sleep    10s
-#    @{win_titles} =    Get Window Titles
-#    Select Window    title=@{win_titles}[1]
-#    Confirm Jbrowse
-#    Select Window    title=@{win_titles}[0]    # Return to result page
-#    Wait Results
     [Teardown]    Close All Browsers
 
 no_hits_query
@@ -48,19 +43,7 @@ upload_file
     Wait Results
     Click Element    //*[@id="results-table"]/tbody/tr[3]/td[1]/a    # Click JBrowse btn and comfirm
     Sleep    10s
-#    @{win_titles} =    Get Window Titles
-#    Select Window    title=@{win_titles}[1]
-#    Confirm Jbrowse
-#    Select Window    title=@{win_titles}[0]    # Return to result page
-#    Wait Results
    [Teardown]    Close All Browsers
-
-#special_query1
-#    [Documentation]    The query resulting in all scores are the same should display normally, having no js errors
-#    [Setup]    Open and Max Browser    ${url}    ${browser}
-#    Go To    ${url}/error1
-#    Should Not Have JS Errors
-    # [Teardown]    Close All Browsers
 
 test_back_button
     [Documentation]    Click back button of browser after querying, and the organisms should be displayed normally (check the number of organism labels)
