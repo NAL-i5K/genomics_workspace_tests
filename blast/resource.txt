@@ -3,7 +3,7 @@ Library           SeleniumLibrary    10
 
 *** Variables ***
 ${url}
-${browser}        chrome
+${browser}        headlesschrome
 
 *** Keywords ***
 Open and Max Browser
