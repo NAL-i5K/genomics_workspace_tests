@@ -1,7 +1,7 @@
 *** Settings ***
 Suite Setup       Open and Max Browser    ${url}    ${browser}
 Suite Teardown    Close All Browsers
-Resource          resource.txt
+Resource          ../resource.txt
 
 *** Test Cases ***
 organism_empty_false_check

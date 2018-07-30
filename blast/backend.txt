@@ -1,6 +1,6 @@
 *** Settings ***
 Suite Setup
-Resource          resource.txt
+Resource          ../resource.txt
 
 *** Variables ***
 @{win_titles}
