@@ -60,7 +60,3 @@ Wait Results
     [Documentation]
     Wait Until Element is Visible    hmmer-success    timeout=90s
     Should Not Have JS Errors
-
-Should Not Have JS Errors
-    ${error}=    Execute JavaScript    return window.jsErrors;
-    Should Be Empty    ${error}

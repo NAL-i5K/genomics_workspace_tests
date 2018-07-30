@@ -77,7 +77,3 @@ Wait Results
     [Documentation]
     Wait Until Element is Visible    xpath=//*[@id="results-table_info" and contains(., "entries")]    timeout=90s
     Should Not Have JS Errors
-
-Should Not Have JS Errors
-    ${error}=    Execute JavaScript    return window.jsErrors;
-    Should Be Empty    ${error}

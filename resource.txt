@@ -10,3 +10,7 @@ Open and Max Browser
     [Arguments]    ${url}    ${browser}
     Open Browser    ${url}    ${browser}
     Set Window Size    1280    1024
+
+Should Not Have JS Errors
+    ${error}=    Execute JavaScript    return window.jsErrors;
+    Should Be Empty    ${error}
