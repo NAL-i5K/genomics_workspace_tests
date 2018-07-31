@@ -36,7 +36,7 @@ upload_file
     [Setup]    Open and Max Browser    ${url}    ${browser}
     Go To    ${url}
     Choose Database    # Send sample query
-    Choose File    xpath=//input[@name="query-file" and @class="query-file"]    ${CURDIR}${/}sample.txt
+    Choose File    xpath=//input[@name="query-file" and @class="query-file"]    ${CURDIR}${/}sample.fa
     Mouse Over    xpath=//*[@id="box-organism"]/*/div/input[contains(@organism, "ceratitis-capitata")]
     Search
     Wait Results
