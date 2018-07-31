@@ -8,5 +8,7 @@ Test utilities based on [robotframework](http://robotframework.org/) using [Sele
 
 ## Usage
 
-- Run the test: at the root directory of this repo, run `robot --variable url:[url you want] [app]/`, for example:    - `robot --variable url:https://i5k.nal.usda.gov/webapp/blast/ blast/`
+- Run the test: at the root directory of this repo, run `robot --variable url:[url you want] [app]/`, for example:
+  - `robot --variable url:https://i5k.nal.usda.gov/webapp/blast/ blast/`
   - `robot --variable url:https://i5k.nal.usda.gov/webapp/hmmer/ hmmer/`
+  - `robot --variable url:https://i5k.nal.usda.gov/webapp/clustal/ clustal/`
