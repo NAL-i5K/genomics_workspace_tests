@@ -3,6 +3,9 @@ Suite Setup       Open and Max Browser    ${url}    ${browser}
 Suite Teardown    Close All Browsers
 Resource          ../resource.txt
 
+*** Variables ***
+${url}    ${url_prefix}/blast
+
 *** Test Cases ***
 organism_empty_false_check
     [Documentation]    After choosing organisms, mouse over on 'All organisms', sanity check will be triggered incorrectly

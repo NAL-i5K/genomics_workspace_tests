@@ -3,8 +3,7 @@ Suite Setup
 Resource          ../resource.txt
 
 *** Variables ***
-@{win_titles}
-${xpath_num_organism}    //div[@id="box-organism"]/label
+${url}    ${url_prefix}/hmmer
 
 *** Test Cases ***
 valid_query

@@ -1,6 +1,8 @@
 # Test Genomics Workspace
 
-Test utilities based on [robotframework](http://robotframework.org/) using [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary) to test production site of genomics-workspace.
+## Introduction
+
+Test utilities based on [robotframework](http://robotframework.org/) using [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary) to test production site of [genomics-workspace](https://github.com/NAL-i5K/genomics-workspace/).
 
 ## Installation
 
@@ -8,7 +10,5 @@ Test utilities based on [robotframework](http://robotframework.org/) using [Sele
 
 ## Usage
 
-- Run the test: at the root directory of this repo, run `robot --variable url:[url you want] [app]/`, for example:
-  - `robot --variable url:https://i5k.nal.usda.gov/webapp/blast/ blast/`
-  - `robot --variable url:https://i5k.nal.usda.gov/webapp/hmmer/ hmmer/`
-  - `robot --variable url:https://i5k.nal.usda.gov/webapp/clustal/ clustal/`
+- Run all tests: at the root directory of this repo, run `robot --variable url_prefix:[url_prefix of your genomics-workspace] .`, for example, if you have a genomics-workspace instance with root url at https://gmod-i5k.nal.usda.gov/webapp/ `robot --variable url_prefix:https://gmod-i5k.nal.usda.gov/webapp/ .`
+- Run only one of the apps (blast, hmmer, or clustal): `robot --variable url_prefix:[url_prefix of your genomics-workspace] [app]/`

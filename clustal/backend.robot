@@ -3,7 +3,7 @@ Suite Setup
 Resource          ../resource.txt
 
 *** Variables ***
-${xpath_num_organism}    //div[@id="box-organism"]/label
+${url}    ${url_prefix}/clustal
 
 *** Test Cases ***
 valid_query
